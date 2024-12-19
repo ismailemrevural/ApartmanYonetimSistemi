@@ -1,135 +1,64 @@
-Apartman Yönetim Sistemi
-========================
+# Apartman Yönetim Sistemi
 
-Proje Hakkında
---------------
+Bu proje, apartman yönetimi için geliştirilmiş ve Java dilinde yazılmış bir masaüstü uygulamasıdır. Özellikle apartman yöneticileri için birçok fonksiyonellik barındırmakta ve yönetimi kolaylaştırmaktadır. *Swing* kütüphanesi kullanılarak GUI oluşturulmuştur.
 
-Bu proje, Java dilinde **Swing** kütüphanesi kullanılarak geliştirilmiş bir **Apartman Yönetim Sistemi**'dir. Sistem, apartman sakinleri ve yöneticilerinin günlük işlemlerini yönetmelerini sağlar. Apartman yönetim sisteminde kullanıcılar, aidat ödemelerini takip edebilir, daire kiralamalarını yönetebilir, bakım talepleri oluşturabilir ve daha birçok yönetimsel işlem gerçekleştirebilir.
+## Özellikler
 
-Proje, **GUI (Graphical User Interface)** tabanlı bir uygulama olarak geliştirilmiştir ve kullanıcı dostu arayüzü ile işlemleri kolaylaştırmayı amaçlamaktadır.
+### Yönetici Yetkileri
 
-Özellikler
-----------
+- *Kullanıcı Yönetimi*:
+  - Kullanıcı ekleme, silme ve yetki verme işlemleri.
+- *Aidat Yönetimi*:
+  - Aidat ödemelerini takip etme ve raporlama.
+- *Bakım/Onarım Yönetimi*:
+  - Bakım ve onarım kayıtlarını ekleme, silme ve listeleme.
+- *Bildirim Yönetimi*:
+  - Kullanıcılara bildirim gönderme.
+- *Finansal Raporlama*:
+  - Gelir ve giderleri raporlama.
 
-*   **Kullanıcı Yönetimi:** Apartman sakinlerinin ve yöneticilerinin kaydı yapılabilir.
-    
-*   **Aidat Yönetimi:** Aidat ödemeleri kaydedilir ve borçlar takip edilir.
-    
-*   **Daire Yönetimi:** Dairelerin durumu (boş/işgal) takip edilebilir ve kiralama işlemleri yapılabilir.
-    
-*   **Bakım ve Onarım Talepleri:** Sakinler, bakım talepleri oluşturabilir ve talepler takip edilebilir.
-    
-*   **Raporlama:** Ödeme geçmişi ve bakım talepleri raporları görüntülenebilir.
-    
-*   **GUI Arayüzü:** Swing kullanılarak görsel bir kullanıcı arayüzü tasarlanmıştır.
-    
+### Kullanıcı Yetkileri
 
-Teknolojiler
-------------
+- *Kullanıcı İşlemleri*:
+  - Kullanıcı kayıt olma, giriş yapma.
+- *Aidat Görüntüleme*:
+  - Kullanıcının sistemdeki kendisine ait olan aidat kayıtlarını görüntülemesi.
+- *Bakım/Onarım Görüntüleme*:
+  - Kullanıcının sistemdeki bakım ve onarım kayıtlarını görüntülemesi.
+- *Bildirim Görüntüleme*:
+  - Kullanıcının kendisine gönderilmiş bildirimleri görüntülemesi.
+- *Finansal Rapor Görüntüleme*:
+  - Kullanıcının apartmanın gelir ve giderlerini şeffaf şekilde görüntülemesi.
 
-*   **Java 11** veya daha yeni bir sürüm.
-    
-*   **Swing:** Java'nın GUI kütüphanesi ile kullanıcı arayüzü tasarımı.
-    
-*   **IDE:** IntelliJ IDEA, Eclipse, NetBeans gibi Java destekleyen IDE'ler.
-    
-*   **Veritabanı:** Proje için basit dosya tabanlı bir veri yönetimi kullanılmaktadır. (İleri düzey versiyonlarda veritabanı entegrasyonu yapılabilir.)
-    
+## Kurulum
 
-Başlangıç
----------
+1. *Java JDK* ve *IntelliJ IDEA* yüklü olduğundan emin olun.
+2. Projeyi *IntelliJ IDEA*’da çalıştırın.
+3. “apartmanyonetimsistemi.sql” dosyasını MySQL veritabanında çalıştırın.
+4. MySQL giriş bilgilerinizi src /Database.java dosyasında düzenleyin.
+5. Eğer projede eksik kütüphane varsa, aşağıdaki bağımlılıkları ekleyin:
+   - mysql-connector-j-9.1.0
+   - jcalendar-1.4
 
-### Gereksinimler
+## Kullanım
 
-1.  **Java Development Kit (JDK):** Java 11 veya daha yeni bir sürüm.
-    
-2.  **IDE:** Java geliştirme için IntelliJ IDEA, Eclipse veya NetBeans gibi bir IDE önerilir.
-    
-3.  **Command Line (Opsiyonel):** Java'nın yüklü olduğu terminal veya komut satırı kullanılabilir.
-    
+1. Projeyi IntelliJ IDEA'da çalıştırın.
+2. İlk kez kullanıyorsanız, apartman bilgilerini girmeniz istenecektir.
+3. Giriş sayfasında, ilk kullanıcı yönetici olarak oluşturulur. Daha sonra oluşturulan kullanıcılar sakin olarak sisteme eklenir.
+4. Yönetici hesabıyla giriş yaptıktan sonra, diğer kullanıcıları yönetici olarak yetkilendirebilirsiniz.
+5. Giriş yaptıktan sonra, kullanıcı rolünüze uygun işlemleri gerçekleştirebilirsiniz.
 
-### Kurulum
+## Katkıda Bulunma
 
-1.  bashCopy codegit clone https://github.com/username/apartman-yonetim-sistemi.git
-    
-2.  IDE'nizde projeyi açın.
-    
-3.  Maven veya Gradle kullanıyorsanız bağımlılıkları yüklemek için aşağıdaki komutları kullanabilirsiniz:
-    
-    *   bashCopy codemvn clean install
-        
-    *   bashCopy codegradle build
-        
-4.  Uygulamayı başlatmak için ApartmanYonetimSistemi.java ana sınıfını çalıştırabilirsiniz.
-    
+Katkıda bulunmak isterseniz, lütfen bir *pull request* gönderin veya bir *issue* açın.
 
-### Kullanıcı Arayüzü
+## Lisans
 
-Proje, **Swing** kullanılarak geliştirilmiş görsel bir arayüze sahiptir. Kullanıcılar, aşağıdaki menüler ve seçenekler ile sisteme etkileşimde bulunabilirler:
+Bu proje şu an için lisanssızdır.
 
-*   **Ana Menü:**
-    
-    *   **Kullanıcı Kaydı**
-        
-    *   **Aidat Ödeme**
-        
-    *   **Daire Durumu Görüntüle**
-        
-    *   **Bakım Talebi Oluştur**
-        
-    *   **Çıkış**
-        
-*   **Kullanıcı Kaydı:** Kullanıcılar, ad, soyad, daire numarası gibi bilgileri girerek sisteme kaydolabilirler.
-    
-*   **Aidat Ödeme:** Kullanıcılar, ödenmemiş aidatları görüntüleyebilir ve ödeme yapabilirler.
-    
-*   **Daire Durumu Görüntüle:** Apartmandaki dairelerin kiralanıp kiralanmadığını (boş/işgal) kontrol edebilirsiniz.
-    
-*   **Bakım Talebi:** Sakinler, dairelerindeki arızalar için bakım talebi oluşturabilirler.
-    
+## Geliştiriciler
 
-### Kullanıcı Arayüzü Örneği
-
-_Örnek Ana Menü_
-
-Uygulama, menüler arasında geçiş yapmayı sağlayan butonlar ve kullanıcıdan veri almak için **JTextField**, **JTextArea**, **JButton** gibi Swing bileşenlerini kullanır.
-
-### Örnek Kullanıcı Akışı
-
-1.  **Kullanıcı Kaydı:** Program başlatıldığında, kullanıcıya kaydolması için bir arayüz sunulur. Kullanıcı, bilgilerini girer ve "Kaydet" butonuna basarak sisteme kaydolur.
-    
-2.  **Aidat Ödeme:** Kullanıcı, ödeme yapmak için "Aidat Ödeme" menüsüne tıklayarak, mevcut borçları ve ödeme seçeneklerini görüntüler.
-    
-3.  **Daire Durumu Görüntüleme:** Kullanıcı, dairenin durumunu görmek için "Daire Durumu Görüntüle" seçeneğine tıklayarak dairenin boş olup olmadığını kontrol eder.
-    
-4.  **Bakım Talebi:** Sakinler, arızalar için bakım talebi oluşturabilir ve taleplerini sisteme kaydedebilir.
-    
-
- 
-
-Katkıda Bulunma
----------------
-
-1.  Projeyi GitHub üzerinden **fork**'layın.
-    
-2.  bashCopy codegit checkout -b feature/özellik-ismi
-    
-3.  bashCopy codegit commit -am 'Yeni özellik eklendi'
-    
-4.  bashCopy codegit push origin feature/özellik-ismi
-    
-5.  Bir **pull request** gönderin.
-    
-
-Lisans
-------
-
-Bu projede Lisans bulunmamaktadır
-
-İletişim
---------
-
-*   **Geliştirici:** Ali Can Altun
-*   **E-posta:** https://github.com/alicanaltun
-*   **Geliştirici:** İsmail Emre Vural
-*   **E-posta:** https://github.com/ismailemrevural
+- *Ali Can Altun*
+  - [GitHub Profili](https://github.com/alicanaltun)
+- *İsmail Emre Vural*
+  - [GitHub Profili](https://github.com/ismailemrevural)
