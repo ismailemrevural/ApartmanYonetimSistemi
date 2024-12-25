@@ -58,7 +58,7 @@ Bu proje şu an için lisanssızdır.
 
 ## Geliştiriciler
 
-- *Ali Can Altun*
+- *Ali Can Altun - 1220505015*
   - [GitHub Profili](https://github.com/alicanaltun)
-- *İsmail Emre Vural*
+- *İsmail Emre Vural - 1220505009*
   - [GitHub Profili](https://github.com/ismailemrevural)
